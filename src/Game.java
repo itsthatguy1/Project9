@@ -26,15 +26,15 @@ public class Game {
     private final int WINNING_SCORE = 100;
 
     /**
-     *
+     * The main method
      */
     public static void main(String[] args)
     {
-        Game game = new Game();
+        new Game();
     }
 
     /**
-     *
+     * The constructor
      */
     public Game() {
         turnTotal = 0;
@@ -56,7 +56,7 @@ public class Game {
     }
 
     /**
-     *
+     * Reads information from game.csv
      */
     public void readFile()
     {
@@ -67,7 +67,7 @@ public class Game {
     }
 
     /**
-     *
+     * Writes information to game.csv
      */
     public void writeFile()
     {
@@ -87,7 +87,7 @@ public class Game {
     }
 
     /**
-     *
+     * The program's main menu
      */
     public void mainMenu()
     {
@@ -110,7 +110,7 @@ public class Game {
     }
 
     /**
-     *
+     * Prints relevant information about the game's progression
      */
     public void printInfo()
     {
@@ -121,7 +121,9 @@ public class Game {
     }
 
     /**
-     *
+     * Allows the player to choose whether they want to roll or hold
+     * If player selects roll, the rollDye method is run
+     * If player selects hold, endTurn is run
      */
     public void playerChoice() {
         System.out.println("Would you like to:");
@@ -147,7 +149,7 @@ public class Game {
     }
 
     /**
-     *
+     * Generates a random number from 1 to 6. Simulates rolling a dye.
      */
     public void rollDye() {
         final int MAX_ROLL = 6;
@@ -165,7 +167,8 @@ public class Game {
     }
 
     /**
-     *
+     * Switches the player turn and updates total scores.
+     * @param hold
      */
     public void endTurn(boolean hold)
     {
@@ -199,6 +202,7 @@ public class Game {
     }
 
     /**
+     * Prints a "player won" message
      * The Messages have to be reversed b/c endTurn always switches the player turn
      */
     public void printWin()
